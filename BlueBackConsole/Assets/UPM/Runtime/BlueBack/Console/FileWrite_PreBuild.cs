@@ -11,13 +11,12 @@
 */
 #if(DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE)
 #else
+#if(UNITY_EDITOR)
 namespace BlueBack.Console
 {
 	/** FileWrite_PreBuild
 	*/
-	#if(UNITY_EDITOR)
 	[UnityEditor.InitializeOnLoad]
-	#endif
 	public class FileWrite_PreBuild
 	{
 		/** Initialize
@@ -36,5 +35,6 @@ namespace BlueBack.Console
 		}
 	}
 }
+#endif
 #endif
 

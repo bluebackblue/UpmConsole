@@ -9,8 +9,7 @@
 
 /** BlueBack.Console
 */
-#if(DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE)
-#else
+#if(!DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE)
 namespace BlueBack.Console
 {
 	/** FileWriter
@@ -47,17 +46,9 @@ namespace BlueBack.Console
 			UnityEngine.Application.logMessageReceived += CallBack;
 		}
 
-		/** Initialize
-		*/
-		[UnityEngine.RuntimeInitializeOnLoadMethod]
-		private static void Initialize()
-		{
-			UnityEngine.Application.logMessageReceived += CallBack;
-		}
-
 		/** CallBack
 		*/
-		private static void CallBack(string a_text,string a_stacktrace,UnityEngine.LogType a_type)
+		public static void CallBack(string a_text,string a_stacktrace,UnityEngine.LogType a_type)
 		{
 			if(s_enable == true){
 				if(s_inner == false){

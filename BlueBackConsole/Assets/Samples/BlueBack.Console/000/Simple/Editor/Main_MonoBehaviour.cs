@@ -11,7 +11,13 @@ namespace BlueBack.Console.Samples.Simple
 		*/
 		private void Awake()
 		{
-			UnityEngine.Debug.Log("BlueBack.Console.Samples.Simple.Main_MonoBehaviour.Awake");
+			UnityEngine.Debug.Log("BlueBack.Console.Samples.Simple.Main_MonoBehaviour.Awake start");
+
+			#if(!DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE)
+			UnityEngine.Debug.Log("path = " + BlueBack.Console.FileWriter.s_path);
+			#endif
+
+			UnityEngine.Debug.Log("BlueBack.Console.Samples.Simple.Main_MonoBehaviour.Awake end");
 		}
 	}
 }

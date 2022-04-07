@@ -9,8 +9,7 @@
 
 /** BlueBack.Console
 */
-#if(DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE)
-#else
+#if(!DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE)
 namespace BlueBack.Console
 {
 	/** FileWriter_MenuItem

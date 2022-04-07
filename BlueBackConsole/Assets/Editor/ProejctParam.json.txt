@@ -1,0 +1,52 @@
+{
+    "namespace_author":"BlueBack",
+    "namespace_package":"Console",
+    "git_url":"https://github.com/bluebackblue/UpmConsole",
+    "git_api":"https://api.github.com/repos/bluebackblue/UpmConsole",
+    "git_path":"BlueBackConsole/Assets/UPM",
+    "discription_simple":"コード自動生成",
+    "discription_detal":[
+        "コード自動生成"
+    ],
+    "keyword":[
+        "console"
+    ],
+    "changelog":[
+        "# Changelog",
+        "",
+        "## [0.0.0] - 2021-06-22",
+        "### Changes",
+        "- Init",
+        ""
+    ],
+    "root_readmemd_path":"../../README.md",
+    "need_unity_version":"2020.1",
+    "asmdef_runtime":{
+        "define_list":[
+        ],
+        "reference_list":[
+        ]
+    },
+    "asmdef_editor":{
+        "define_list":[
+        ],
+        "reference_list":[
+            {
+               "mode":"package",
+               "package_fullname":"BlueBack.Console",
+                "url":"https://github.com/bluebackblue/UpmConsole"
+            }
+        ]
+    },
+    "asmdef_sample":{
+        "define_list":[
+        ],
+        "reference_list":[
+            {
+                "mode":"package",
+                "package_fullname":"BlueBack.Console",
+                "url":"https://github.com/bluebackblue/UpmConsole"
+            }
+        ]
+    }
+}

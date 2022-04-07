@@ -1,0 +1,163 @@
+Assets\UPM\Runtime\BlueBack\Console\FileWriter.cs(59,53): error CS0234: The type or namespace name 'BuildTarget' does not exist in the namespace 'UnityEditor' (are you missing an assembly reference?)
+
+Assets\UPM\Runtime\BlueBack\Console\FileWriter.cs(58,16): error CS0234: The type or namespace name 'Callbacks' does not exist in the namespace 'UnityEditor' (are you missing an assembly reference?)
+
+Error building Player because scripts had compiler errors
+
+Build completed with a result of 'Failed' in 1 seconds (1369 ms)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+UnityEditor.BuildPlayerWindow+BuildMethodException: 3 errors
+  at UnityEditor.BuildPlayerWindow+DefaultBuildMethods.BuildPlayer (UnityEditor.BuildPlayerOptions options) [0x002d8] in <6cd1f48cbb49444c9215559b997d619a>:0 
+  at UnityEditor.BuildPlayerWindow.CallBuildMethods (System.Boolean askForBuildLocation, UnityEditor.BuildOptions defaultBuildOptions) [0x00080] in <6cd1f48cbb49444c9215559b997d619a>:0 
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+Internal build system error. BuildProgram exited with code -2147024894.
+System.IO.FileNotFoundException: Could not load file or assembly 'PlayerBuildProgramLibrary, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'. �w�肳�ꂽ�t�@�C����������܂���B
+File name: 'PlayerBuildProgramLibrary, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at PlayerBuildProgramTypeWrapper.Run(String[] args)
+   at Program.Main(String[] args)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+BuildFailedException: Incremental Player build failed!
+UnityEditor.Modules.BeeBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args) (at <6cd1f48cbb49444c9215559b997d619a>:0)
+UnityEditor.Modules.DefaultBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) (at <6cd1f48cbb49444c9215559b997d619a>:0)
+UnityEditor.WindowsStandalone.WinPlayerPostProcessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) (at C:/buildslave/unity/build/PlatformDependent/WinPlayer/Extensions/Managed/WinPlayerPostProcessor.cs:38)
+UnityEditor.PostprocessBuildPlayer.Postprocess (UnityEditor.BuildTargetGroup targetGroup, UnityEditor.BuildTarget target, System.Int32 subtarget, System.String installPath, System.String companyName, System.String productName, System.Int32 width, System.Int32 height, UnityEditor.BuildOptions options, UnityEditor.RuntimeClassRegistry usedClassRegistry, UnityEditor.Build.Reporting.BuildReport report) (at <6cd1f48cbb49444c9215559b997d619a>:0)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun()
+
+Build completed with a result of 'Failed' in 3 seconds (2541 ms)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+UnityEditor.BuildPlayerWindow+BuildMethodException: 3 errors
+  at UnityEditor.BuildPlayerWindow+DefaultBuildMethods.BuildPlayer (UnityEditor.BuildPlayerOptions options) [0x002d8] in <6cd1f48cbb49444c9215559b997d619a>:0 
+  at UnityEditor.BuildPlayerWindow.CallBuildMethods (System.Boolean askForBuildLocation, UnityEditor.BuildOptions defaultBuildOptions) [0x00080] in <6cd1f48cbb49444c9215559b997d619a>:0 
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+Should not be capturing when there is a hotcontrol
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+
+Internal build system error. BuildProgram exited with code -2147024894.
+System.IO.FileNotFoundException: Could not load file or assembly 'PlayerBuildProgramLibrary, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'. �w�肳�ꂽ�t�@�C����������܂���B
+File name: 'PlayerBuildProgramLibrary, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at PlayerBuildProgramTypeWrapper.Run(String[] args)
+   at Program.Main(String[] args)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+BuildFailedException: Incremental Player build failed!
+UnityEditor.Modules.BeeBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args) (at <6cd1f48cbb49444c9215559b997d619a>:0)
+UnityEditor.Modules.DefaultBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) (at <6cd1f48cbb49444c9215559b997d619a>:0)
+UnityEditor.WindowsStandalone.WinPlayerPostProcessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) (at C:/buildslave/unity/build/PlatformDependent/WinPlayer/Extensions/Managed/WinPlayerPostProcessor.cs:38)
+UnityEditor.PostprocessBuildPlayer.Postprocess (UnityEditor.BuildTargetGroup targetGroup, UnityEditor.BuildTarget target, System.Int32 subtarget, System.String installPath, System.String companyName, System.String productName, System.Int32 width, System.Int32 height, UnityEditor.BuildOptions options, UnityEditor.RuntimeClassRegistry usedClassRegistry, UnityEditor.Build.Reporting.BuildReport report) (at <6cd1f48cbb49444c9215559b997d619a>:0)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun()
+
+Build completed with a result of 'Failed' in 2 seconds (1759 ms)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+UnityEditor.BuildPlayerWindow+BuildMethodException: 3 errors
+  at UnityEditor.BuildPlayerWindow+DefaultBuildMethods.BuildPlayer (UnityEditor.BuildPlayerOptions options) [0x002d8] in <6cd1f48cbb49444c9215559b997d619a>:0 
+  at UnityEditor.BuildPlayerWindow.CallBuildMethods (System.Boolean askForBuildLocation, UnityEditor.BuildOptions defaultBuildOptions) [0x00080] in <6cd1f48cbb49444c9215559b997d619a>:0 
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+OnPreprocessBuild
+UnityEngine.Debug:Log (object)
+BlueBack.Console.PreBuild:OnPreprocessBuild (UnityEditor.Build.Reporting.BuildReport) (at Assets/UPM/Runtime/BlueBack/Console/FileWrite_PreBuild.cs:28)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+Assets\UPM\Runtime\BlueBack\Console\FileWrite_PreBuild.cs(16,38): error CS0234: The type or namespace name 'Build' does not exist in the namespace 'UnityEditor' (are you missing an assembly reference?)
+
+Assets\UPM\Runtime\BlueBack\Console\FileWrite_PreBuild.cs(26,45): error CS0234: The type or namespace name 'Build' does not exist in the namespace 'UnityEditor' (are you missing an assembly reference?)
+
+Error building Player because scripts had compiler errors
+
+Build completed with a result of 'Failed' in 2 seconds (1526 ms)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+UnityEditor.BuildPlayerWindow+BuildMethodException: 3 errors
+  at UnityEditor.BuildPlayerWindow+DefaultBuildMethods.BuildPlayer (UnityEditor.BuildPlayerOptions options) [0x002d8] in <6cd1f48cbb49444c9215559b997d619a>:0 
+  at UnityEditor.BuildPlayerWindow.CallBuildMethods (System.Boolean askForBuildLocation, UnityEditor.BuildOptions defaultBuildOptions) [0x00080] in <6cd1f48cbb49444c9215559b997d619a>:0 
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+OnPreprocessBuild
+UnityEngine.Debug:Log (object)
+BlueBack.Console.PreBuild:OnPreprocessBuild (UnityEditor.Build.Reporting.BuildReport) (at Assets/UPM/Runtime/BlueBack/Console/FileWrite_PreBuild.cs:29)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+Internal build system error. BuildProgram exited with code -2147024894.
+System.IO.FileNotFoundException: Could not load file or assembly 'PlayerBuildProgramLibrary, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'. �w�肳�ꂽ�t�@�C����������܂���B
+File name: 'PlayerBuildProgramLibrary, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at PlayerBuildProgramTypeWrapper.Run(String[] args)
+   at Program.Main(String[] args)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+BuildFailedException: Incremental Player build failed!
+UnityEditor.Modules.BeeBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args) (at <6cd1f48cbb49444c9215559b997d619a>:0)
+UnityEditor.Modules.DefaultBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) (at <6cd1f48cbb49444c9215559b997d619a>:0)
+UnityEditor.WindowsStandalone.WinPlayerPostProcessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) (at C:/buildslave/unity/build/PlatformDependent/WinPlayer/Extensions/Managed/WinPlayerPostProcessor.cs:38)
+UnityEditor.PostprocessBuildPlayer.Postprocess (UnityEditor.BuildTargetGroup targetGroup, UnityEditor.BuildTarget target, System.Int32 subtarget, System.String installPath, System.String companyName, System.String productName, System.Int32 width, System.Int32 height, UnityEditor.BuildOptions options, UnityEditor.RuntimeClassRegistry usedClassRegistry, UnityEditor.Build.Reporting.BuildReport report) (at <6cd1f48cbb49444c9215559b997d619a>:0)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun()
+
+Build completed with a result of 'Failed' in 2 seconds (2170 ms)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+UnityEditor.BuildPlayerWindow+BuildMethodException: 3 errors
+  at UnityEditor.BuildPlayerWindow+DefaultBuildMethods.BuildPlayer (UnityEditor.BuildPlayerOptions options) [0x002d8] in <6cd1f48cbb49444c9215559b997d619a>:0 
+  at UnityEditor.BuildPlayerWindow.CallBuildMethods (System.Boolean askForBuildLocation, UnityEditor.BuildOptions defaultBuildOptions) [0x00080] in <6cd1f48cbb49444c9215559b997d619a>:0 
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+Should not be capturing when there is a hotcontrol
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+
+BlueBack.Console.Samples.Simple.Main_MonoBehaviour.Awake
+UnityEngine.Debug:Log (object)
+BlueBack.Console.Samples.Simple.Main_MonoBehaviour:Awake () (at Assets/Samples/BlueBack.Console/000/Simple/Editor/Main_MonoBehaviour.cs:14)
+
+BuildPlayerHandler
+UnityEngine.Debug:Log (object)
+BlueBack.Console.Example:BuildPlayerHandler (UnityEditor.BuildPlayerOptions) (at Assets/UPM/Runtime/BlueBack/Console/FileWrite_PreBuild.cs:62)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+BuildPlayerHandler
+UnityEngine.Debug:Log (object)
+BlueBack.Console.Example:BuildPlayerHandler (UnityEditor.BuildPlayerOptions) (at Assets/UPM/Runtime/BlueBack/Console/FileWrite_PreBuild.cs:62)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun ()
+
+BuildPlayerHandler
+UnityEngine.Debug:Log (object)
+BlueBack.Console.Example:BuildPlayerHandler (UnityEditor.BuildPlayerOptions) (at Assets/UPM/Runtime/BlueBack/Console/FileWrite_PreBuild.cs:62)
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+
+BuildPlayerHandler
+UnityEngine.Debug:Log (object)
+BlueBack.Console.Example:BuildPlayerHandler (UnityEditor.BuildPlayerOptions) (at Assets/UPM/Runtime/BlueBack/Console/FileWrite_PreBuild.cs:62)
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+
+OnPreprocessBuild
+UnityEngine.Debug:Log (object)
+BlueBack.Console.PreBuild:OnPreprocessBuild (UnityEditor.Build.Reporting.BuildReport) (at Assets/UPM/Runtime/BlueBack/Console/FileWrite_PreBuild.cs:30)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+BlueBack.Console.Example:CallBack (UnityEditor.BuildPlayerOptions) (at Assets/UPM/Runtime/BlueBack/Console/FileWrite_PreBuild.cs:71)
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+
+Internal build system error. BuildProgram exited with code -2147024894.
+System.IO.FileNotFoundException: Could not load file or assembly 'PlayerBuildProgramLibrary, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'. �w�肳�ꂽ�t�@�C����������܂���B
+File name: 'PlayerBuildProgramLibrary, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at PlayerBuildProgramTypeWrapper.Run(String[] args)
+   at Program.Main(String[] args)
+UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)
+BlueBack.Console.Example:CallBack (UnityEditor.BuildPlayerOptions) (at Assets/UPM/Runtime/BlueBack/Console/FileWrite_PreBuild.cs:71)
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+
+BuildFailedException: Incremental Player build failed!
+UnityEditor.Modules.BeeBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args) (at <6cd1f48cbb49444c9215559b997d619a>:0)
+UnityEditor.Modules.DefaultBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) (at <6cd1f48cbb49444c9215559b997d619a>:0)
+UnityEditor.WindowsStandalone.WinPlayerPostProcessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) (at C:/buildslave/unity/build/PlatformDependent/WinPlayer/Extensions/Managed/WinPlayerPostProcessor.cs:38)
+UnityEditor.PostprocessBuildPlayer.Postprocess (UnityEditor.BuildTargetGroup targetGroup, UnityEditor.BuildTarget target, System.Int32 subtarget, System.String installPath, System.String companyName, System.String productName, System.Int32 width, System.Int32 height, UnityEditor.BuildOptions options, UnityEditor.RuntimeClassRegistry usedClassRegistry, UnityEditor.Build.Reporting.BuildReport report) (at <6cd1f48cbb49444c9215559b997d619a>:0)
+UnityEditor.BuildPipeline:BuildPlayer(BuildPlayerOptions)
+BlueBack.Console.Example:CallBack(BuildPlayerOptions) (at Assets/UPM/Runtime/BlueBack/Console/FileWrite_PreBuild.cs:71)
+UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr, Boolean&)
+
+Assets\UPM\Editor\BlueBack\Console\Editor\Preferences.cs(43,76): error CS0234: The type or namespace name 'FileWriter' does not exist in the namespace 'BlueBack.Console' (are you missing an assembly reference?)
+
+Assets\UPM\Editor\BlueBack\Console\Editor\Preferences.cs(44,72): error CS0234: The type or namespace name 'FileWriter' does not exist in the namespace 'BlueBack.Console' (are you missing an assembly reference?)
+

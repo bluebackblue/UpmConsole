@@ -38,7 +38,7 @@ namespace BlueBack.Console
 
 		/** s_path
 		*/
-		public static string s_path = UnityEngine.Application.dataPath + "/console.txt";
+		public static string s_path = UnityEngine.Application.dataPath + "/consolelog.txt";
 
 		/** static constructor
 		*/

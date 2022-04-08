@@ -4,9 +4,10 @@
     "git_url":"https://github.com/bluebackblue/UpmConsole",
     "git_api":"https://api.github.com/repos/bluebackblue/UpmConsole",
     "git_path":"BlueBackConsole/Assets/UPM",
-    "discription_simple":"コード自動生成",
+    "discription_simple":"コンソール操作",
     "discription_detal":[
-        "コード自動生成"
+        "ファイル出力",
+        "syslog udp 送信",
     ],
     "keyword":[
         "console"

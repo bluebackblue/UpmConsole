@@ -1,5 +1,6 @@
 # BlueBack.Console
-コード自動生成
+ファイル出力
+syslog udp 送信
 
 ## ライセンス
 MIT License

@@ -9,21 +9,21 @@
 
 /** BlueBack.Console
 */
-#if(!DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE)
+#if(!DEF_BLUEBACK_CONSOLE_DISABLE)
 namespace BlueBack.Console
 {
-	/** FileWriter
+	/** InitializeOnLoad
 	*/
 	#if(UNITY_EDITOR)
 	[UnityEditor.InitializeOnLoad]
 	#endif
-	public static class FileWriter_InitializeOnLoad
+	public static class InitializeOnLoad
 	{
 		/** static constructor
 		*/
-		static FileWriter_InitializeOnLoad()
+		static InitializeOnLoad()
 		{
-			UnityEngine.Application.logMessageReceived += FileWriter.CallBack;
+			 CallBack.SetCallBack();
 		}
 	}
 }

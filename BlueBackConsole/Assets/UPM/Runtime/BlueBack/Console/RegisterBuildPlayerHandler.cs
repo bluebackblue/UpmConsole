@@ -9,14 +9,14 @@
 
 /** BlueBack.Console
 */
-#if(!DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE)
+#if(!DEF_BLUEBACK_CONSOLE_DISABLE)
 #if(UNITY_EDITOR)
 namespace BlueBack.Console
 {
-	/** FileWrite_PreBuild
+	/** RegisterBuildPlayerHandler
 	*/
 	[UnityEditor.InitializeOnLoad]
-	public class FileWrite_PreBuild
+	public static class RegisterBuildPlayerHandler
 	{
 		/** Initialize
 		*/

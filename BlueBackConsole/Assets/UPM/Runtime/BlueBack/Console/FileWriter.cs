@@ -9,69 +9,44 @@
 
 /** BlueBack.Console
 */
-#if(!DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE)
+#if(!DEF_BLUEBACK_CONSOLE_DISABLE)
 namespace BlueBack.Console
 {
 	/** FileWriter
 	*/
-	#if(UNITY_EDITOR)
-	[UnityEditor.InitializeOnLoad]
-	#endif
-	public static class FileWriter
+	public sealed class FileWriter
 	{
-		/** s_inner
+		/** s_instance
 		*/
-		private static bool s_inner = false;
+		public static FileWriter s_instance = new FileWriter();
 
-		/** s_filestream
+		/** filestream
 		*/
-		public static System.IO.FileStream s_filestream = null;
+		public System.IO.FileStream filestream = null;
 
-		/** s_exiter
+		/** path
 		*/
-		public static FileWriter_Exiter s_exiter;
+		public string path = UnityEngine.Application.dataPath + "/consolelog.txt";
 
-		/** s_enable
+		/** Action
 		*/
-		public static bool s_enable = true;
-
-		/** s_path
-		*/
-		public static string s_path = UnityEngine.Application.dataPath + "/consolelog.txt";
-
-		/** static constructor
-		*/
-		static FileWriter()
+		public void Action(string a_text,string a_stacktrace,UnityEngine.LogType a_type)
 		{
-			UnityEngine.Application.logMessageReceived += CallBack;
+			if(this.filestream == null){
+				this.filestream = System.IO.File.Open(this.path,System.IO.FileMode.Append,System.IO.FileAccess.Write,System.IO.FileShare.ReadWrite);
+			}
+
+			byte[] t_binary = System.Text.Encoding.UTF8.GetBytes(a_text + "\n" + a_stacktrace + "\n");
+
+			this.filestream.Write(t_binary);
+			this.filestream.Flush(true);
 		}
 
-		/** CallBack
+		/** CloseFileStream
 		*/
-		public static void CallBack(string a_text,string a_stacktrace,UnityEngine.LogType a_type)
+		public static void CloseFileStream()
 		{
-			if(s_enable == true){
-				if(s_inner == false){
-					s_inner = true;
-
-					try{
-						if(s_exiter == null){
-							s_exiter = new FileWriter_Exiter();
-						}
-
-						if(s_filestream == null){
-							s_filestream = System.IO.File.Open(s_path,System.IO.FileMode.Append,System.IO.FileAccess.Write,System.IO.FileShare.ReadWrite);
-						}
-
-						byte[] t_binary = System.Text.Encoding.UTF8.GetBytes(a_text + "\n" + a_stacktrace + "\n");
-
-						s_filestream.Write(t_binary);
-						s_filestream.Flush(true);
-					}finally{
-						s_inner = false;
-					}
-				}
-			}
+			FileWriter.CloseFileStream();
 		}
 	}
 }

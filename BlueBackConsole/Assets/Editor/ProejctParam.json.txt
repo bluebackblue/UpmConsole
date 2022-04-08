@@ -25,6 +25,11 @@
         "define_list":[
         ],
         "reference_list":[
+            {
+               "mode":"package",
+               "package_fullname":"BlueBack.JsonItem",
+                "url":"https://github.com/bluebackblue/UpmJsonItem"
+            }
         ]
     },
     "asmdef_editor":{

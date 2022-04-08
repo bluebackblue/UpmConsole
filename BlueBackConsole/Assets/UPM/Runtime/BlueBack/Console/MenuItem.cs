@@ -19,33 +19,35 @@ namespace BlueBack.Console
 	{
 		/** MenuItem_Enable
 		*/
-		[UnityEditor.MenuItem("BlueBack/Console/CallBack/Enable")]
+		[UnityEditor.MenuItem("BlueBack/Console/Enable")]
 		private static void MenuItem_Enable()
 		{
-			CallBack.s_enable = true;
+			Console.Enable();
 		}
 
 		/** MenuItem_Disable
 		*/
-		[UnityEditor.MenuItem("BlueBack/Console/CallBack/Disable")]
+		[UnityEditor.MenuItem("BlueBack/Console/Disable")]
 		private static void MenuItem_Disable()
 		{
-			CallBack.s_enable = false;
-
-			#if(!DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE)
-			FileWriter.s_instance.CloseFileStream();
-			#endif
+			Console.Disable();
 		}
 
-		/** MenuItem_CloseFile
+		/** MenuItem_Disable
 		*/
-		#if(!DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE)
-		[UnityEditor.MenuItem("BlueBack/Console/FileWriter/CloseFile")]
-		private static void MenuItem_CloseFile()
+		[UnityEditor.MenuItem("BlueBack/Console/LoadSetting")]
+		private static void MenuItem_LoadSetting()
 		{
-			FileWriter.s_instance.CloseFileStream();
+			Console.LoadSetting();
 		}
-		#endif
+
+		/** MenuItem_FileClose
+		*/
+		[UnityEditor.MenuItem("BlueBack/Console/Close")]
+		private static void MenuItem_Close()
+		{
+			Console.Close();
+		}
 	}
 }
 #endif

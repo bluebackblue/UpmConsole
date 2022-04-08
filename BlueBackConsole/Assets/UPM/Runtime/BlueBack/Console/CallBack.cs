@@ -24,28 +24,19 @@ namespace BlueBack.Console
 		*/
 		public static bool s_enable = true;
 
-		/** s_callback
-		*/
-		public static bool s_callback = false;
-
 		/** SetCallBack
 		*/
 		public static void SetCallBack()
 		{
-			if(s_callback == false){
-				s_callback = true;
-				UnityEngine.Application.logMessageReceived += Inner_CallBack;
-			}
+			UnityEngine.Application.logMessageReceived -= Inner_CallBack;
+			UnityEngine.Application.logMessageReceived += Inner_CallBack;
 		}
 
 		/** SetCallBack
 		*/
 		public static void UnSetCallBack()
 		{
-			if(s_callback == true){
-				s_callback = false;
-				UnityEngine.Application.logMessageReceived -= Inner_CallBack;
-			}
+			UnityEngine.Application.logMessageReceived -= Inner_CallBack;
 		}
 
 		/** Inner_CallBack
@@ -56,9 +47,7 @@ namespace BlueBack.Console
 				if(s_inner == false){
 					s_inner = true;
 					try{
-						#if(!DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE)
-						FileWriter.s_instance.Action(a_text,a_stacktrace,a_type);
-						#endif
+						Console.Action(a_text,a_stacktrace,a_type);
 					}finally{
 						s_inner = false;
 					}

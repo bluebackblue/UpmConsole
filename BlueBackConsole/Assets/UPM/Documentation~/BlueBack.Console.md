@@ -7,6 +7,7 @@ MIT License
 
 ## 依存 / 使用ライセンス等
 ### ランタイム
+* https://github.com/bluebackblue/UpmJsonItem
 ### エディター
 * https://github.com/bluebackblue/UpmConsole
 ### サンプル

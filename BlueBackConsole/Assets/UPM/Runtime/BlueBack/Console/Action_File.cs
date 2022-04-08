@@ -9,17 +9,13 @@
 
 /** BlueBack.Console
 */
-#if((!DEF_BLUEBACK_CONSOLE_DISABLE)&&(!DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE))
+#if(!DEF_BLUEBACK_CONSOLE_DISABLE)
 namespace BlueBack.Console
 {
-	/** FileWriter
+	/** Action_File
 	*/
-	public sealed class FileWriter
+	public sealed class Action_File
 	{
-		/** s_instance
-		*/
-		public static FileWriter s_instance = new FileWriter();
-
 		/** filestream
 		*/
 		public System.IO.FileStream filestream;
@@ -30,18 +26,22 @@ namespace BlueBack.Console
 
 		/** constructor
 		*/
-		public FileWriter()
+		public Action_File(in Setting a_setting)
 		{
 			//filestream
 			this.filestream = null;
 
 			//path
-			this.path = UnityEngine.Application.dataPath + "/consolelog.txt";
+			if(a_setting.file.path == null){
+				this.path = UnityEngine.Application.dataPath + "/consolelog.txt";
+			}else{
+				this.path = a_setting.file.path;
+			}
 		}
 
 		/** destructor
 		*/
-		~FileWriter()
+		~Action_File()
 		{
 			if(this.filestream != null){
 				this.filestream.Flush(true);
@@ -50,9 +50,20 @@ namespace BlueBack.Console
 			}
 		}
 
-		/** CloseFileStream
+		/** Dispose
 		*/
-		public void CloseFileStream()
+		public void Dispose()
+		{
+			if(this.filestream != null){
+				this.filestream.Flush(true);
+				this.filestream.Close();
+				this.filestream = null;
+			}
+		}
+
+		/** Close
+		*/
+		public void Close()
 		{
 			if(this.filestream != null){
 				this.filestream.Flush(true);

@@ -46,8 +46,8 @@ namespace BlueBack.Console.Editor
 			UnityEditor.EditorGUILayout.LabelField(string.Format("DEF_BLUEBACK_CONSOLE_DISABLE : {0}","0"));
 			#endif
 
-			#if((!DEF_BLUEBACK_CONSOLE_DISABLE)&&(!DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE))
-			UnityEditor.EditorGUILayout.LabelField(string.Format("FileStream : {0}",BlueBack.Console.FileWriter.s_instance.filestream != null ? true : false));
+			#if(DEF_BLUEBACK_CONSOLE_DISABLE)
+			UnityEditor.EditorGUILayout.LabelField(string.Format("FileStream : {0}",BlueBack.Console.Console.s_action_file.filestream != null ? true : false));
 			#endif
 
 			#if(!DEF_BLUEBACK_CONSOLE_DISABLE)

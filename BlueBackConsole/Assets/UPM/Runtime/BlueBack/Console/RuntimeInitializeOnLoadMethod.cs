@@ -23,7 +23,7 @@ namespace BlueBack.Console
 		[UnityEngine.RuntimeInitializeOnLoadMethod(UnityEngine.RuntimeInitializeLoadType.AfterAssembliesLoaded)]
 		private static void AfterAssembliesLoaded()
 		{
-			FileWriter.SetCallBack();
+			CallBack.SetCallBack();
 		}
 
 		/** AfterSceneLoad
@@ -31,7 +31,7 @@ namespace BlueBack.Console
 		[UnityEngine.RuntimeInitializeOnLoadMethod(UnityEngine.RuntimeInitializeLoadType.AfterSceneLoad)]
 		private static void AfterSceneLoad()
 		{
-			FileWriter.SetCallBack();
+			CallBack.SetCallBack();
 		}
 
 		/** BeforeSceneLoad
@@ -39,7 +39,7 @@ namespace BlueBack.Console
 		[UnityEngine.RuntimeInitializeOnLoadMethod(UnityEngine.RuntimeInitializeLoadType.BeforeSceneLoad)]
 		private static void BeforeSceneLoad()
 		{
-			FileWriter.SetCallBack();
+			CallBack.SetCallBack();
 		}
 
 		/** BeforeSplashScreen
@@ -47,7 +47,7 @@ namespace BlueBack.Console
 		[UnityEngine.RuntimeInitializeOnLoadMethod(UnityEngine.RuntimeInitializeLoadType.BeforeSplashScreen)]
 		private static void BeforeSplashScreen()
 		{
-			FileWriter.SetCallBack();
+			CallBack.SetCallBack();
 		}
 
 		#endif

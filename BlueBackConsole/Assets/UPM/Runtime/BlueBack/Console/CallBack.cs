@@ -20,10 +20,6 @@ namespace BlueBack.Console
 		*/
 		private static bool s_inner = false;
 
-		/** s_exiter
-		*/
-		public static Exiter s_exiter;
-
 		/** s_enable
 		*/
 		public static bool s_enable = true;
@@ -60,11 +56,9 @@ namespace BlueBack.Console
 				if(s_inner == false){
 					s_inner = true;
 					try{
-						if(s_exiter == null){
-							s_exiter = new Exiter();
-						}
-
+						#if(!DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE)
 						FileWriter.s_instance.Action(a_text,a_stacktrace,a_type);
+						#endif
 					}finally{
 						s_inner = false;
 					}

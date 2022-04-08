@@ -41,9 +41,16 @@ namespace BlueBack.Console.Editor
 		public override void OnGUI(string a_search_context)
 		{
 			#if(DEF_BLUEBACK_CONSOLE_DISABLE)
-			UnityEditor.EditorGUILayout.LabelField(string.Format("DEF_BLUEBACK_CONSOLE_DISABLE : {0}","define"));
+			UnityEditor.EditorGUILayout.LabelField(string.Format("DEF_BLUEBACK_CONSOLE_DISABLE : {0}","1"));
 			#else
+			UnityEditor.EditorGUILayout.LabelField(string.Format("DEF_BLUEBACK_CONSOLE_DISABLE : {0}","0"));
+			#endif
+
+			#if((!DEF_BLUEBACK_CONSOLE_DISABLE)&&(!DEF_BLUEBACK_CONSOLE_FILEWRITER_DISABLE))
 			UnityEditor.EditorGUILayout.LabelField(string.Format("FileStream : {0}",BlueBack.Console.FileWriter.s_instance.filestream != null ? true : false));
+			#endif
+
+			#if(!DEF_BLUEBACK_CONSOLE_DISABLE)
 			UnityEditor.EditorGUILayout.LabelField(string.Format("Enable : {0}",BlueBack.Console.CallBack.s_enable));
 			#endif
 		}

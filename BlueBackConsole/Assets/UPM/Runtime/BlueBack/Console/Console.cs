@@ -21,11 +21,15 @@ namespace BlueBack.Console
 	{
 		/** s_action_file
 		*/
+		#if(!DEF_BLUEBACK_CONSOLE_FILE_DISABLE)
 		public static Action_File s_action_file = null;
+		#endif
 
 		/** s_action_syslog
 		*/
+		#if(!DEF_BLUEBACK_CONSOLE_SYSLOG_DISABLE)
 		public static Action_Syslog s_action_syslog = null;
+		#endif
 
 		/** static constructor
 		*/
@@ -38,15 +42,19 @@ namespace BlueBack.Console
 		*/
 		public static void LoadSetting()
 		{
+			#if(!DEF_BLUEBACK_CONSOLE_FILE_DISABLE)
 			if(s_action_file != null){
 				s_action_file.Dispose();
 				s_action_file = null;
 			}
+			#endif
 
+			#if(!DEF_BLUEBACK_CONSOLE_SYSLOG_DISABLE)
 			if(s_action_syslog != null){
 				s_action_syslog.Dispose();
 				s_action_syslog = null;
 			}
+			#endif
 
 			Setting t_setting;
 			{
@@ -64,25 +72,34 @@ namespace BlueBack.Console
 				}
 			}
 
+			#if(!DEF_BLUEBACK_CONSOLE_FILE_DISABLE)
 			if(t_setting.file.enable == true){
 				s_action_file = new Action_File(in t_setting);
 			}
+			#endif
 
+			#if(!DEF_BLUEBACK_CONSOLE_SYSLOG_DISABLE)
 			if(t_setting.syslog.enable == true){
 				s_action_syslog = new Action_Syslog(in t_setting);
 			}
+			#endif
 		}
 
 		/** Action
 		*/
 		public static void Action(string a_text,string a_stacktrace,UnityEngine.LogType a_type)
 		{
+			#if(!DEF_BLUEBACK_CONSOLE_FILE_DISABLE)
 			if(s_action_file != null){
 				s_action_file.Action(a_text,a_stacktrace,a_type);
 			}
+			#endif
+
+			#if(!DEF_BLUEBACK_CONSOLE_SYSLOG_DISABLE)
 			if(s_action_syslog != null){
 				s_action_syslog.Action(a_text,a_stacktrace,a_type);
 			}
+			#endif
 		}
 
 		/** Enable
@@ -98,26 +115,34 @@ namespace BlueBack.Console
 		{
 			CallBack.UnSetCallBack();
 
+			#if(!DEF_BLUEBACK_CONSOLE_FILE_DISABLE)
 			if(s_action_file != null){
 				s_action_file.Close();
 			}
+			#endif
 
+			#if(!DEF_BLUEBACK_CONSOLE_SYSLOG_DISABLE)
 			if(s_action_syslog != null){
 				s_action_syslog.Close();
 			}
+			#endif
 		}
 
 		/** Close
 		*/
 		public static void Close()
 		{
+			#if(!DEF_BLUEBACK_CONSOLE_FILE_DISABLE)
 			if(s_action_file != null){
 				s_action_file.Close();
 			}
+			#endif
 
+			#if(!DEF_BLUEBACK_CONSOLE_SYSLOG_DISABLE)
 			if(s_action_syslog != null){
 				s_action_syslog.Close();
 			}
+			#endif
 		}
 	}
 }

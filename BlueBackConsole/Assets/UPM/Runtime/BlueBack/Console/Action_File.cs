@@ -3,13 +3,13 @@
 /**
 	Copyright (c) blueback
 	Released under the MIT License
-	@brief コンソール。
+	@brief コンソール。ファイル。
 */
 
 
 /** BlueBack.Console
 */
-#if(!DEF_BLUEBACK_CONSOLE_DISABLE)
+#if((!DEF_BLUEBACK_CONSOLE_DISABLE)&&(!DEF_BLUEBACK_CONSOLE_FILE_DISABLE))
 namespace BlueBack.Console
 {
 	/** Action_File

@@ -46,8 +46,15 @@ namespace BlueBack.Console.Editor
 			UnityEditor.EditorGUILayout.LabelField(string.Format("DEF_BLUEBACK_CONSOLE_DISABLE : {0}","0"));
 			#endif
 
-			#if(DEF_BLUEBACK_CONSOLE_DISABLE)
-			UnityEditor.EditorGUILayout.LabelField(string.Format("FileStream : {0}",BlueBack.Console.Console.s_action_file.filestream != null ? true : false));
+			#if((!DEF_BLUEBACK_CONSOLE_DISABLE)&&(!DEF_BLUEBACK_CONSOLE_FILE_DISABLE))
+			UnityEditor.EditorGUILayout.LabelField(string.Format("File : filestream : {0}",BlueBack.Console.Console.s_action_file.filestream != null ? true : false));
+			UnityEditor.EditorGUILayout.LabelField(string.Format("File : path : {0}",BlueBack.Console.Console.s_action_file.path != null ? BlueBack.Console.Console.s_action_file.path : ""));
+			#endif
+
+			#if((!DEF_BLUEBACK_CONSOLE_DISABLE)&&(!DEF_BLUEBACK_CONSOLE_SYSLOG_DISABLE))
+			UnityEditor.EditorGUILayout.LabelField(string.Format("File : myname : {0}",BlueBack.Console.Console.s_action_syslog.myname != null ? BlueBack.Console.Console.s_action_syslog.myname : ""));
+			UnityEditor.EditorGUILayout.LabelField(string.Format("File : host : {0}",BlueBack.Console.Console.s_action_syslog.host != null ? BlueBack.Console.Console.s_action_syslog.host : ""));
+			UnityEditor.EditorGUILayout.LabelField(string.Format("File : port : {0}",BlueBack.Console.Console.s_action_syslog.port));
 			#endif
 		}
 	}

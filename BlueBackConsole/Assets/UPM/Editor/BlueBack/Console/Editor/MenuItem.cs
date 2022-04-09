@@ -9,8 +9,8 @@
 
 /** BlueBack.Console.Editor
 */
-#if(!DEF_BLUEBACK_CONSOLE_DISABLE)
 #if(UNITY_EDITOR)
+#if(!DEF_BLUEBACK_CONSOLE_DISABLE)
 namespace BlueBack.Console.Editor
 {
 	/** MenuItem

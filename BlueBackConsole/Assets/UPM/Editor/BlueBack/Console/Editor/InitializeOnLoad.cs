@@ -9,8 +9,8 @@
 
 /** BlueBack.Console.Editor
 */
-#if(!DEF_BLUEBACK_CONSOLE_DISABLE)
 #if(UNITY_EDITOR)
+#if((!DEF_BLUEBACK_CONSOLE_DISABLE)&&(!DEF_BLUEBACK_CONSOLE_INITIALIZEONLOAD_DISABLE))
 namespace BlueBack.Console.Editor
 {
 	/** InitializeOnLoad

@@ -9,17 +9,20 @@
 
 /** BlueBack.Console.Editor
 */
-#if(!DEF_BLUEBACK_CONSOLE_DISABLE)
 #if(UNITY_EDITOR)
+#if(!DEF_BLUEBACK_CONSOLE_DISABLE)
 namespace BlueBack.Console.Editor
 {
 	/** Install
 	*/
+	#if(!DEF_BLUEBACK_CONSOLE_INSTALL_DISABLE)
 	[UnityEditor.InitializeOnLoad]
+	#endif
 	public static class Install
 	{
 		/** static constructor
 		*/
+		#if(!DEF_BLUEBACK_CONSOLE_INSTALL_DISABLE)
 		static Install()
 		{
 			UnityEngine.TextAsset t_textasset = UnityEngine.Resources.Load<UnityEngine.TextAsset>(Config.SETTING_RESOURCES_PATH);
@@ -27,6 +30,7 @@ namespace BlueBack.Console.Editor
 				InstallMain();
 			}
 		}
+		#endif
 
 		/** InstallMain
 		*/

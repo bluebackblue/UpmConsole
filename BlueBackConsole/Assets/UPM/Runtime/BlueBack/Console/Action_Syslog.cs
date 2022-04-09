@@ -3,13 +3,13 @@
 /**
 	Copyright (c) blueback
 	Released under the MIT License
-	@brief コンソール。
+	@brief コンソール。syslog
 */
 
 
 /** BlueBack.Console
 */
-#if(!DEF_BLUEBACK_CONSOLE_DISABLE)
+#if((!DEF_BLUEBACK_CONSOLE_DISABLE)&&(!DEF_BLUEBACK_CONSOLE_SYSLOG_DISABLE))
 namespace BlueBack.Console
 {
 	/** Action_Syslog
@@ -22,15 +22,15 @@ namespace BlueBack.Console
 
 		/** myname
 		*/
-		private string myname;
+		public string myname;
 
 		/** host
 		*/
-		private string host;
+		public string host;
 
 		/** port
 		*/
-		private int port;
+		public int port;
 
 		/** constructor
 		*/

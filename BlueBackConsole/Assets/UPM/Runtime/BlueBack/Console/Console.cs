@@ -8,6 +8,9 @@
 
 
 /** BlueBack.Console
+
+	UnityEngine.Resources.Load<UnityEngine.TextAsset>("BlueBackConsoleSetting")で設定ＪＳＯＮをロードしている。
+
 */
 #if(!DEF_BLUEBACK_CONSOLE_DISABLE)
 namespace BlueBack.Console
@@ -52,12 +55,10 @@ namespace BlueBack.Console
 					string t_jsonstring = BlueBack.JsonItem.Convert.ConvertToNormailze(t_textasset.text);
 					t_setting = BlueBack.JsonItem.Convert.JsonStringToObject<Setting>(t_jsonstring);
 
-					/*
-					#if(UNITY_EDITOR)
-					DebugTool.EditorLog(string.Format("{0}{1}",t_setting.file.enable,t_setting.file.path));
-					DebugTool.EditorLog(string.Format("{0}{1}{2}",t_setting.syslog.enable,t_setting.syslog.host,t_setting.syslog.port));
+					#if(UNITY_EDITOR) && false
+					DebugTool.EditorLog(string.Format("{0} {1}",t_setting.file.enable,t_setting.file.path));
+					DebugTool.EditorLog(string.Format("{0} {1} {2}",t_setting.syslog.enable,t_setting.syslog.host,t_setting.syslog.port));
 					#endif
-					*/
 				}else{
 					t_setting = Setting.CreateDefault();
 				}
@@ -88,14 +89,14 @@ namespace BlueBack.Console
 		*/
 		public static void Enable()
 		{
-			CallBack.s_enable = true;
+			CallBack.SetCallBack();
 		}
 
 		/** Disable
 		*/
 		public static void Disable()
 		{
-			CallBack.s_enable = false;
+			CallBack.UnSetCallBack();
 
 			if(s_action_file != null){
 				s_action_file.Close();

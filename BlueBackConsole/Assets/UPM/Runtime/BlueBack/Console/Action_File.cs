@@ -80,7 +80,7 @@ namespace BlueBack.Console
 				this.filestream = System.IO.File.Open(this.path,System.IO.FileMode.Append,System.IO.FileAccess.Write,System.IO.FileShare.ReadWrite);
 			}
 
-			byte[] t_binary = System.Text.Encoding.UTF8.GetBytes(a_text + "\n" + a_stacktrace + "\n");
+			byte[] t_binary = System.Text.Encoding.UTF32.GetBytes(a_text + "\n" + a_stacktrace + "\n");
 
 			this.filestream.Write(t_binary);
 			this.filestream.Flush(true);

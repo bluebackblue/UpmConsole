@@ -6,8 +6,9 @@
     "git_path":"BlueBackConsole/Assets/UPM",
     "discription_simple":"コンソール操作",
     "discription_detal":[
-        "ファイル出力",
-        "syslog udp 送信",
+        "コンソール操作",
+        "* ファイル出力",
+        "* syslog udp 送信",
     ],
     "keyword":[
         "console"

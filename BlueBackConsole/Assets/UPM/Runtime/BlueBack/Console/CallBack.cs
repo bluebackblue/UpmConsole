@@ -20,10 +20,6 @@ namespace BlueBack.Console
 		*/
 		private static bool s_inner = false;
 
-		/** s_enable
-		*/
-		public static bool s_enable = true;
-
 		/** SetCallBack
 		*/
 		public static void SetCallBack()
@@ -43,14 +39,16 @@ namespace BlueBack.Console
 		*/
 		private static void Inner_CallBack(string a_text,string a_stacktrace,UnityEngine.LogType a_type)
 		{
-			if(s_enable == true){
-				if(s_inner == false){
-					s_inner = true;
-					try{
-						Console.Action(a_text,a_stacktrace,a_type);
-					}finally{
-						s_inner = false;
+			if(s_inner == false){
+				s_inner = true;
+				try{
+					if(a_type == UnityEngine.LogType.Error){
+						UnityEngine.Debug.LogError("error");
 					}
+
+					Console.Action(a_text,a_stacktrace,a_type);
+				}finally{
+					s_inner = false;
 				}
 			}
 		}

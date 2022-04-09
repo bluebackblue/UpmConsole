@@ -20,6 +20,10 @@ namespace BlueBack.Console
 		*/
 		private System.Net.Sockets.UdpClient udpclient;
 
+		/** myname
+		*/
+		private string myname;
+
 		/** host
 		*/
 		private string host;
@@ -34,6 +38,9 @@ namespace BlueBack.Console
 		{
 			//udpclient
 			this.udpclient = null;
+
+			//myname
+			this.myname = "127.0.0.1";
 
 			//host
 			if(a_setting.syslog.host == null){
@@ -86,11 +93,32 @@ namespace BlueBack.Console
 		{
 			if(this.udpclient == null){
 				this.udpclient = new System.Net.Sockets.UdpClient(this.host,this.port);
+				this.myname = System.Net.Dns.GetHostName();
 			}
 
-			byte[] t_binary = System.Text.Encoding.UTF8.GetBytes("host BlueBack.Console " + a_text + ":" + a_stacktrace);
+			int t_facility = 1;
+			int t_severity = 6;
+			int t_pri = t_facility * 8 + t_severity;
 
-			this.udpclient.Send(t_binary,t_binary.Length);
+			System.DateTime t_now = System.DateTime.Now;
+
+			string t_timestamp = string.Format("{0} {1}{2} {3}",
+				t_now.ToString("MMM",System.Globalization.CultureInfo.CreateSpecificCulture("en-US")),
+				t_now.Day < 10 ? " " : "",
+				t_now.Day,
+				t_now.ToString("hh:mm:ss")
+			);
+
+			byte[] t_binary = System.Text.Encoding.UTF8.GetBytes(string.Format("<{0}>{1} {2} {3}:{4}",t_pri,t_timestamp,this.myname,"Unity",a_text + "\n" + a_stacktrace));
+
+			int t_length = t_binary.Length;
+			if(t_length > 1000){
+				t_length = 999;
+				t_binary[t_length + 0] = 0x00;
+				t_binary[t_length + 1] = 0x00;
+			}
+
+			this.udpclient.Send(t_binary,t_length);
 		}
 	}
 }

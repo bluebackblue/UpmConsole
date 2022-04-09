@@ -37,19 +37,19 @@ Gitクライアントがインストールされている必要がある。
 * https://docs.unity3d.com/ja/current/Manual/upm-git.html
 * https://git-scm.com/
 
-## 例
+## デファイン
 ### DEF_BLUEBACK_CONSOLE_DISABLE
- * 機能を無効にする。
+ * 機能を無効化する。
 ### DEF_BLUEBACK_CONSOLE_FILE_DISABLE
- * ファイル出力を無効にする。
+ * ファイル出力を無効化する。
 ### DEF_BLUEBACK_CONSOLE_SYSLOG_DISABLE
- * syslog送信を無効にする。
+ * syslog送信を無効化する。
+### DEF_BLUEBACK_CONSOLE_INSTALL_DISABLE
+ * エディター起動時の自動インストールを無効化する。
 ### DEF_BLUEBACK_CONSOLE_RUNTIMEINITIALIZE_DISABLE
  * ゲーム開始時の初期化を無効化する。
 ### DEF_BLUEBACK_CONSOLE_INITIALIZEONLOAD_DISABLE
  * エディター起動時の初期化を無効化する。
-### DEF_BLUEBACK_CONSOLE_INSTALL_DISABLE
- * エディター起動時の自動インストールを無効化する。
 ### DEF_BLUEBACK_CONSOLE_BUILDPIPELINE_DISABLE
  * ビルド時の初期化を無効化する。
 

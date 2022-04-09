@@ -3,20 +3,19 @@
 /**
 	Copyright (c) blueback
 	Released under the MIT License
-	@brief コンソール。
+	@brief コンソール。エディター起動時。
 */
 
 
-/** BlueBack.Console
+/** BlueBack.Console.Editor
 */
 #if(!DEF_BLUEBACK_CONSOLE_DISABLE)
-namespace BlueBack.Console
+#if(UNITY_EDITOR)
+namespace BlueBack.Console.Editor
 {
 	/** InitializeOnLoad
 	*/
-	#if(UNITY_EDITOR)
 	[UnityEditor.InitializeOnLoad]
-	#endif
 	public static class InitializeOnLoad
 	{
 		/** static constructor
@@ -27,5 +26,6 @@ namespace BlueBack.Console
 		}
 	}
 }
+#endif
 #endif
 

@@ -50,7 +50,7 @@ namespace BlueBack.Console
 
 			Setting t_setting;
 			{
-				UnityEngine.TextAsset t_textasset = UnityEngine.Resources.Load<UnityEngine.TextAsset>("BlueBackConsoleSetting");
+				UnityEngine.TextAsset t_textasset = UnityEngine.Resources.Load<UnityEngine.TextAsset>(Config.SETTING_RESOURCES_PATH);
 				if(t_textasset != null){
 					string t_jsonstring = BlueBack.JsonItem.Convert.ConvertToNormailze(t_textasset.text);
 					t_setting = BlueBack.JsonItem.Convert.JsonStringToObject<Setting>(t_jsonstring);

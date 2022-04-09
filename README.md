@@ -1,6 +1,7 @@
 # BlueBack.Console
-ファイル出力
-syslog udp 送信
+コンソール操作
+* ファイル出力
+* syslog udp 送信
 
 ## ライセンス
 MIT License
@@ -11,6 +12,8 @@ MIT License
 * https://github.com/bluebackblue/UpmJsonItem
 ### エディター
 * https://github.com/bluebackblue/UpmConsole
+* https://github.com/bluebackblue/UpmAssetLib
+* https://github.com/bluebackblue/UpmJsonItem
 ### サンプル
 * https://github.com/bluebackblue/UpmConsole
 
@@ -19,7 +22,7 @@ Unity 2022.1.0b12
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/UpmConsole.git?path=BlueBackConsole/Assets/UPM#0.0.4
+* https://github.com/bluebackblue/UpmConsole.git?path=BlueBackConsole/Assets/UPM#0.0.5
 ### 開発
 * https://github.com/bluebackblue/UpmConsole.git?path=BlueBackConsole/Assets/UPM
 

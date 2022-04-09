@@ -7,11 +7,11 @@
 */
 
 
-/** BlueBack.Console
+/** BlueBack.Console.Editor
 */
 #if(!DEF_BLUEBACK_CONSOLE_DISABLE)
 #if(UNITY_EDITOR)
-namespace BlueBack.Console
+namespace BlueBack.Console.Editor
 {
 	/** MenuItem
 	*/
@@ -41,12 +41,20 @@ namespace BlueBack.Console
 			Console.LoadSetting();
 		}
 
-		/** MenuItem_FileClose
+		/** MenuItem_Close
 		*/
 		[UnityEditor.MenuItem("BlueBack/Console/Close")]
 		private static void MenuItem_Close()
 		{
 			Console.Close();
+		}
+
+		/** MenuItem_Install
+		*/
+		[UnityEditor.MenuItem("BlueBack/Console/Install")]
+		private static void MenuItem_Install()
+		{
+			Install.InstallMain();
 		}
 	}
 }

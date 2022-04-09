@@ -3,25 +3,24 @@
 /**
 	Copyright (c) blueback
 	Released under the MIT License
-	@brief コンソール。
+	@brief コンソール。ビルド時。
 */
 
 
-/** BlueBack.Console
+/** BlueBack.Console.Editor
 */
 #if(!DEF_BLUEBACK_CONSOLE_DISABLE)
 #if(UNITY_EDITOR)
-namespace BlueBack.Console
+namespace BlueBack.Console.Editor
 {
 	/** RegisterBuildPlayerHandler
 	*/
 	[UnityEditor.InitializeOnLoad]
 	public static class RegisterBuildPlayerHandler
 	{
-		/** Initialize
+		/** static constructor
 		*/
-		[UnityEditor.InitializeOnLoadMethod]
-		private static void Initialize()
+		static RegisterBuildPlayerHandler()
 		{
 			UnityEditor.BuildPlayerWindow.RegisterBuildPlayerHandler(CallBack);
 		}

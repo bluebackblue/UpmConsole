@@ -16,42 +16,6 @@ namespace BlueBack.Console
 	*/
 	public static class RuntimeInitializeOnLoadMethod
 	{
-		#if(false)
-
-		/** AfterAssembliesLoaded
-		*/
-		[UnityEngine.RuntimeInitializeOnLoadMethod(UnityEngine.RuntimeInitializeLoadType.AfterAssembliesLoaded)]
-		private static void AfterAssembliesLoaded()
-		{
-			CallBack.SetCallBack();
-		}
-
-		/** AfterSceneLoad
-		*/
-		[UnityEngine.RuntimeInitializeOnLoadMethod(UnityEngine.RuntimeInitializeLoadType.AfterSceneLoad)]
-		private static void AfterSceneLoad()
-		{
-			CallBack.SetCallBack();
-		}
-
-		/** BeforeSceneLoad
-		*/
-		[UnityEngine.RuntimeInitializeOnLoadMethod(UnityEngine.RuntimeInitializeLoadType.BeforeSceneLoad)]
-		private static void BeforeSceneLoad()
-		{
-			CallBack.SetCallBack();
-		}
-
-		/** BeforeSplashScreen
-		*/
-		[UnityEngine.RuntimeInitializeOnLoadMethod(UnityEngine.RuntimeInitializeLoadType.BeforeSplashScreen)]
-		private static void BeforeSplashScreen()
-		{
-			CallBack.SetCallBack();
-		}
-
-		#endif
-
 		/** SubsystemRegistration
 		*/
 		[UnityEngine.RuntimeInitializeOnLoadMethod(UnityEngine.RuntimeInitializeLoadType.SubsystemRegistration)]

@@ -33,9 +33,9 @@ namespace BlueBack.Console
 
 			//path
 			if(a_setting.file.path == null){
-				this.path = UnityEngine.Application.dataPath + "/consolelog.txt";
+				this.path = UnityEngine.Application.dataPath + "/" + a_setting.file.filename;
 			}else{
-				this.path = a_setting.file.path;
+				this.path = a_setting.file.path + "/" + a_setting.file.filename;
 			}
 		}
 

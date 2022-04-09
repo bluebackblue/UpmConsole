@@ -1,0 +1,1 @@
+{"syslog":{"port":514l,"host":"127.0.0.1","enable":true},"file":{"filename":"consolelog.txt","enable":true}}

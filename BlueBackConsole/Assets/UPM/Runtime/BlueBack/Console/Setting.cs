@@ -21,6 +21,7 @@ namespace BlueBack.Console
 		{
 			public bool enable;
 			public string path;
+			public string filename;
 		}
 
 		/** Syslog
@@ -50,6 +51,7 @@ namespace BlueBack.Console
 				{
 					enable = true,
 					path = null,
+					filename = "consolelog.txt",
 				},
 				syslog = new Syslog()
 				{

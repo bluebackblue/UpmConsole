@@ -32,6 +32,22 @@ namespace BlueBack.Console.Samples.Simple.Editor
 		{
 			UnityEngine.Debug.LogWarning("ワーニング");
 		}
+
+		/** アサート。
+		*/
+		[UnityEditor.MenuItem("Samples/BlueBack.Console/Simple/LogAssertion")]
+		private static void MenuItem_Assert()
+		{
+			UnityEngine.Debug.LogAssertion("アサート");
+		}
+
+		/** 例外。
+		*/
+		[UnityEditor.MenuItem("Samples/BlueBack.Console/Simple/LogException")]
+		private static void MenuItem_Exception()
+		{
+			UnityEngine.Debug.LogException(new System.Exception("例外"));
+		}
 	}
 	#endif
 }

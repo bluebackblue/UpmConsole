@@ -3,7 +3,7 @@
 /**
 	Copyright (c) blueback
 	Released under the MIT License
-	@brief コンソール。ビルド時。
+	@brief ビルド時。
 */
 
 
@@ -22,12 +22,12 @@ namespace BlueBack.Console.Editor
 		*/
 		static RegisterBuildPlayerHandler()
 		{
-			UnityEditor.BuildPlayerWindow.RegisterBuildPlayerHandler(CallBack);
+			UnityEditor.BuildPlayerWindow.RegisterBuildPlayerHandler(Inner_CallBack);
 		}
  
-		/** CallBack
+		/** Inner_CallBack
 		*/
-		private static void CallBack(UnityEditor.BuildPlayerOptions a_option)
+		private static void Inner_CallBack(UnityEditor.BuildPlayerOptions a_option)
 		{
 			UnityEditor.BuildPipeline.BuildPlayer(a_option);
 		}

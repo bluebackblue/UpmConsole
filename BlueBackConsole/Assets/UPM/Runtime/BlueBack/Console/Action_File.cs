@@ -14,7 +14,7 @@ namespace BlueBack.Console
 {
 	/** Action_File
 	*/
-	public sealed class Action_File
+	public sealed class Action_File : System.IDisposable
 	{
 		/** filestream
 		*/
@@ -32,10 +32,10 @@ namespace BlueBack.Console
 			this.filestream = null;
 
 			//path
-			if(a_setting.file.path == null){
-				this.path = UnityEngine.Application.dataPath + "/" + a_setting.file.filename;
+			if(a_setting.file.output_path == null){
+				this.path = UnityEngine.Application.dataPath + "/" + a_setting.file.output_filename;
 			}else{
-				this.path = a_setting.file.path + "/" + a_setting.file.filename;
+				this.path = a_setting.file.output_path + "/" + a_setting.file.output_filename;
 			}
 		}
 
@@ -50,7 +50,7 @@ namespace BlueBack.Console
 			}
 		}
 
-		/** Dispose
+		/** [System.IDisposable]Dispose
 		*/
 		public void Dispose()
 		{

@@ -3,7 +3,7 @@
 /**
 	Copyright (c) blueback
 	Released under the MIT License
-	@brief コンソール。エディター起動時。
+	@brief エディター起動時。
 */
 
 

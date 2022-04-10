@@ -19,18 +19,38 @@ namespace BlueBack.Console
 		*/
 		public struct File
 		{
+			/** 有効フラグ。
+			*/
 			public bool enable;
-			public string path;
-			public string filename;
+
+			/** 出力。
+
+				output_path == null : UnityEngine.Application.dataPath が設定される。
+
+			*/
+			public string output_path;
+			public string output_filename;
 		}
 
 		/** Syslog
 		*/
 		public struct Syslog
 		{
+			/** 有効フラグ。
+			*/
 			public bool enable;
-			public string host;
-			public int port;
+
+			/** サーバー。
+			*/
+			public string server_name;
+			public int server_port;
+
+			/** タグ。
+
+				tag : 32文字以内。
+
+			*/
+			public string tag;
 		}
 
 		/** file
@@ -50,14 +70,15 @@ namespace BlueBack.Console
 				file = new File()
 				{
 					enable = true,
-					path = null,
-					filename = "consolelog.txt",
+					output_path = null,
+					output_filename = "consolelog.txt",
 				},
 				syslog = new Syslog()
 				{
 					enable = false,
-					host = "127.0.0.1",
-					port = 514,
+					server_name = "127.0.0.1",
+					server_port = 514,
+					tag = "Unity",
 				}
 			};
 		}

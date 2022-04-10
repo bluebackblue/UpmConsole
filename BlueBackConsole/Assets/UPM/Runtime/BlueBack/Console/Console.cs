@@ -9,7 +9,7 @@
 
 /** BlueBack.Console
 
-	UnityEngine.Resources.Load<UnityEngine.TextAsset>("BlueBackConsoleSetting")で設定ＪＳＯＮをロードしている。
+	Config.SETTING_RESOURCES_PATHから設定をロードしている。
 
 */
 #if(!DEF_BLUEBACK_CONSOLE_DISABLE)

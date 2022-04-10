@@ -3,7 +3,7 @@
 /**
 	Copyright (c) blueback
 	Released under the MIT License
-	@brief コンソール。インストール。
+	@brief インストール。
 */
 
 
@@ -22,15 +22,16 @@ namespace BlueBack.Console.Editor
 	{
 		/** static constructor
 		*/
-		#if(!DEF_BLUEBACK_CONSOLE_INSTALL_DISABLE)
 		static Install()
 		{
+			//自動インストール。
+			#if(!DEF_BLUEBACK_CONSOLE_INSTALL_DISABLE)
 			UnityEngine.TextAsset t_textasset = UnityEngine.Resources.Load<UnityEngine.TextAsset>(Config.SETTING_RESOURCES_PATH);
 			if(t_textasset == null){
 				InstallMain();
 			}
+			#endif
 		}
-		#endif
 
 		/** InstallMain
 		*/
@@ -38,8 +39,10 @@ namespace BlueBack.Console.Editor
 		{
 			Setting t_setting = Setting.CreateDefault();
 			string t_jsonstring = BlueBack.JsonItem.Convert.ObjectToJsonString(t_setting);
-			BlueBack.AssetLib.Editor.CreateDirectoryWithAssetsPath.Create("Resources");
-			BlueBack.AssetLib.Editor.SaveTextWithAssetsPath.SaveNoBomUtf8(t_jsonstring,"Resources/" + Config.SETTING_RESOURCES_PATH + ".json",AssetLib.LineFeedOption.CRLF);
+
+			string t_path = "Resources/" + Config.SETTING_RESOURCES_PATH + ".json";
+			BlueBack.AssetLib.Editor.CreateDirectoryWithAssetsPath.Create(System.IO.Path.GetDirectoryName(t_path));
+			BlueBack.AssetLib.Editor.SaveTextWithAssetsPath.SaveNoBomUtf8(t_jsonstring,t_path,AssetLib.LineFeedOption.CRLF);
 
 			BlueBack.AssetLib.Editor.RefreshAssetDatabase.Refresh();
 		}

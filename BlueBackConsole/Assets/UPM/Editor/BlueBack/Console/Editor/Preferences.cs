@@ -47,14 +47,15 @@ namespace BlueBack.Console.Editor
 			#endif
 
 			#if((!DEF_BLUEBACK_CONSOLE_DISABLE)&&(!DEF_BLUEBACK_CONSOLE_FILE_DISABLE))
-			UnityEditor.EditorGUILayout.LabelField(string.Format("File : filestream : {0}",BlueBack.Console.Console.s_action_file.filestream != null ? true : false));
-			UnityEditor.EditorGUILayout.LabelField(string.Format("File : path : {0}",BlueBack.Console.Console.s_action_file.path != null ? BlueBack.Console.Console.s_action_file.path : ""));
+			UnityEditor.EditorGUILayout.LabelField(string.Format("File : filestream : {0}",BlueBack.Console.Console.s_action_file.filestream != null ? "open" : "null"));
+			UnityEditor.EditorGUILayout.LabelField(string.Format("File : path : {0}",BlueBack.Console.Console.s_action_file.path != null ? BlueBack.Console.Console.s_action_file.path : "null"));
 			#endif
 
 			#if((!DEF_BLUEBACK_CONSOLE_DISABLE)&&(!DEF_BLUEBACK_CONSOLE_SYSLOG_DISABLE))
-			UnityEditor.EditorGUILayout.LabelField(string.Format("File : myname : {0}",BlueBack.Console.Console.s_action_syslog.myname != null ? BlueBack.Console.Console.s_action_syslog.myname : ""));
-			UnityEditor.EditorGUILayout.LabelField(string.Format("File : host : {0}",BlueBack.Console.Console.s_action_syslog.host != null ? BlueBack.Console.Console.s_action_syslog.host : ""));
-			UnityEditor.EditorGUILayout.LabelField(string.Format("File : port : {0}",BlueBack.Console.Console.s_action_syslog.port));
+			UnityEditor.EditorGUILayout.LabelField(string.Format("File : udpclient : {0}",BlueBack.Console.Console.s_action_syslog.udpclient != null ? "open" : "null"));
+			UnityEditor.EditorGUILayout.LabelField(string.Format("File : myname : {0}",BlueBack.Console.Console.s_action_syslog.myname != null ? BlueBack.Console.Console.s_action_syslog.myname : "null"));
+			UnityEditor.EditorGUILayout.LabelField(string.Format("File : server_name : {0}",BlueBack.Console.Console.s_action_syslog.server_name != null ? BlueBack.Console.Console.s_action_syslog.server_name : "null"));
+			UnityEditor.EditorGUILayout.LabelField(string.Format("File : server_port : {0}",BlueBack.Console.Console.s_action_syslog.server_port));
 			#endif
 		}
 	}

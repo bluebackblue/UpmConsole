@@ -42,10 +42,6 @@ namespace BlueBack.Console
 			if(s_inner == false){
 				s_inner = true;
 				try{
-					if(a_type == UnityEngine.LogType.Error){
-						UnityEngine.Debug.LogError("error");
-					}
-
 					Console.Action(a_text,a_stacktrace,a_type);
 				}finally{
 					s_inner = false;

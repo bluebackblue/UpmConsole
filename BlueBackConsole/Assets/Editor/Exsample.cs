@@ -13,7 +13,7 @@ namespace Editor
 	//<<COMMENT>> * ファイル出力を無効化する。
 
 	//<<COMMENT>>### DEF_BLUEBACK_CONSOLE_SYSLOG_DISABLE
-	//<<COMMENT>> * syslog送信を無効化する。
+	//<<COMMENT>> * 送信を無効化する。
 
 	//<<COMMENT>>### DEF_BLUEBACK_CONSOLE_INSTALL_DISABLE
 	//<<COMMENT>> * エディター起動時の自動インストールを無効化する。

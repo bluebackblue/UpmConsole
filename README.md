@@ -22,7 +22,7 @@ Unity 2022.1.0b12
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/UpmConsole.git?path=BlueBackConsole/Assets/UPM#0.0.6
+* https://github.com/bluebackblue/UpmConsole.git?path=BlueBackConsole/Assets/UPM#0.0.7
 ### 開発
 * https://github.com/bluebackblue/UpmConsole.git?path=BlueBackConsole/Assets/UPM
 
@@ -43,7 +43,7 @@ Gitクライアントがインストールされている必要がある。
 ### DEF_BLUEBACK_CONSOLE_FILE_DISABLE
  * ファイル出力を無効化する。
 ### DEF_BLUEBACK_CONSOLE_SYSLOG_DISABLE
- * syslog送信を無効化する。
+ * 送信を無効化する。
 ### DEF_BLUEBACK_CONSOLE_INSTALL_DISABLE
  * エディター起動時の自動インストールを無効化する。
 ### DEF_BLUEBACK_CONSOLE_RUNTIMEINITIALIZE_DISABLE

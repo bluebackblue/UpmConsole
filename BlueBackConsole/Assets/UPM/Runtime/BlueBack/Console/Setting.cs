@@ -69,7 +69,7 @@ namespace BlueBack.Console
 			{
 				file = new File()
 				{
-					enable = true,
+					enable = false,
 					output_path = null,
 					output_filename = "consolelog.txt",
 				},

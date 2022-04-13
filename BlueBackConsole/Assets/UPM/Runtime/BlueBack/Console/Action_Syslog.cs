@@ -82,7 +82,7 @@ namespace BlueBack.Console
 
 		/** constructor
 		*/
-		public Action_Syslog(in Setting a_setting)
+		public Action_Syslog(Setting a_setting)
 		{
 			//udpclient
 			this.udpclient = null;

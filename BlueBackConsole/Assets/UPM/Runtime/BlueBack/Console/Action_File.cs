@@ -26,7 +26,7 @@ namespace BlueBack.Console
 
 		/** constructor
 		*/
-		public Action_File(in Setting a_setting)
+		public Action_File(Setting a_setting)
 		{
 			//filestream
 			this.filestream = null;

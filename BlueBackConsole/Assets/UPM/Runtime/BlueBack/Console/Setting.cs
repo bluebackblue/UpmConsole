@@ -13,7 +13,7 @@ namespace BlueBack.Console
 {
 	/** Setting
 	*/
-	public struct Setting
+	public class Setting
 	{
 		/** File
 		*/

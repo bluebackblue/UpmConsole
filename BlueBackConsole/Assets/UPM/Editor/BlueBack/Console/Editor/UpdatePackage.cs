@@ -22,7 +22,7 @@ namespace BlueBack.Console.Editor
 
 		/** MenuItem_UpdatePackage_Develop
 		*/
-		#if(!DEF_USER_BLUEBACK_CONSOLE)
+		#if(!USERDEF_BLUEBACK_CONSOLE)
 		[UnityEditor.MenuItem("BlueBack/Console/UpdatePackage/Develop")]
 		#endif
 		public static void MenuItem_UpdatePackage_Develop()
@@ -40,7 +40,7 @@ namespace BlueBack.Console.Editor
 
 		/** MenuItem_UpdatePackage_Last
 		*/
-		#if(!DEF_USER_BLUEBACK_CONSOLE)
+		#if(!USERDEF_BLUEBACK_CONSOLE)
 		[UnityEditor.MenuItem("BlueBack/Console/UpdatePackage/Last " + Version.packageversion)]
 		#endif
 		public static void MenuItem_UpdatePackage_Last()

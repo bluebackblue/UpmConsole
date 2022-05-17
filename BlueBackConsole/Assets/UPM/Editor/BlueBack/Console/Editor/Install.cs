@@ -7,6 +7,13 @@
 */
 
 
+/** define
+*/
+#if((ASMDEF_BLUEBACK_JSONITEM)||(USERDEF_BLUEBACK_JSONITEM))
+#define ASMDEF_TRUE
+#endif
+
+
 /** BlueBack.Console.Editor
 */
 #if(UNITY_EDITOR)
@@ -36,6 +43,7 @@ namespace BlueBack.Console.Editor
 		/** InstallMain
 		*/
 		public static void InstallMain()
+		#if(ASMDEF_TRUE)
 		{
 			Setting t_setting = Setting.CreateDefault();
 			string t_jsonstring = BlueBack.JsonItem.Convert.ObjectToJsonString(t_setting);
@@ -46,6 +54,11 @@ namespace BlueBack.Console.Editor
 
 			BlueBack.AssetLib.Editor.RefreshAssetDatabase.Refresh();
 		}
+		#else
+		{
+			#warning "ASMDEF_TRUE"
+		}
+		#endif
 	}
 }
 #endif

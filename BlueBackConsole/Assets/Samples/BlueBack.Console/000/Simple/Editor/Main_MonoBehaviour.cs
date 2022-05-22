@@ -5,8 +5,8 @@ namespace BlueBack.Console.Samples.Simple
 {
 	/** Main_MonoBehaviour
 	*/
-    public class Main_MonoBehaviour : UnityEngine.MonoBehaviour
-    {
+	public class Main_MonoBehaviour : UnityEngine.MonoBehaviour
+	{
 		/** Awake
 		*/
 		private void Awake()

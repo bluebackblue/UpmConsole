@@ -22,7 +22,7 @@ namespace BlueBack.Console.Editor
 		*/
 		static InitializeOnLoad()
 		{
-			 CallBack.SetCallBack();
+			CallBack.SetCallBack();
 		}
 	}
 }

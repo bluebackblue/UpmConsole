@@ -24,7 +24,7 @@ namespace BlueBack.Console.Editor
 		{
 			UnityEditor.BuildPlayerWindow.RegisterBuildPlayerHandler(Inner_CallBack);
 		}
- 
+
 		/** Inner_CallBack
 		*/
 		private static void Inner_CallBack(UnityEditor.BuildPlayerOptions a_option)

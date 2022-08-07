@@ -7,7 +7,7 @@ namespace BlueBack.Console.Samples.Simple.Editor
 	/** MenuItem
 	*/
 	#if(UNITY_EDITOR)
-	public class MenuItem
+	public static class MenuItem
 	{
 		/** ログ。
 		*/

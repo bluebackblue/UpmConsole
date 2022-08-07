@@ -13,7 +13,7 @@ namespace BlueBack.Console
 {
 	/** Setting
 	*/
-	public class Setting
+	public sealed class Setting
 	{
 		/** File
 		*/

@@ -8,7 +8,7 @@
 	"discription_detal":[
 		"コンソール操作",
 		"* ファイル出力",
-		"* syslog udp 送信",
+		"* syslog udp 送信"
 	],
 	"keyword":[
 		"console"

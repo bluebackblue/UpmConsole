@@ -26,5 +26,11 @@ namespace Editor
 
 	//<<COMMENT>>### DEF_BLUEBACK_CONSOLE_BUILDPIPELINE_DISABLE
 	//<<COMMENT>> * ビルド時の初期化を無効化する。
+
+	//<< CS_BLOCK_START>>
+	#if(false)
+	public sealed class Exsample : UnityEngine.MonoBehaviour{}
+	#endif
+	//<< CS_BLOCK_END>>
 }
 

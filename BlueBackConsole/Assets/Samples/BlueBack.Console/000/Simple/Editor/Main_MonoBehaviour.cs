@@ -1,4 +1,5 @@
 
+
 /** BlueBack.Console.Samples.Simple
 */
 namespace BlueBack.Console.Samples.Simple

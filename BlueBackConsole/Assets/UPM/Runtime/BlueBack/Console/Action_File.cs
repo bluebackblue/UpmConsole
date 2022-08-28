@@ -82,7 +82,7 @@ namespace BlueBack.Console
 
 			byte[] t_binary = System.Text.Encoding.UTF32.GetBytes(a_text + "\n" + a_stacktrace + "\n");
 
-			this.filestream.Write(t_binary);
+			this.filestream.Write(t_binary,0,t_binary.Length);
 			this.filestream.Flush(true);
 		}
 	}

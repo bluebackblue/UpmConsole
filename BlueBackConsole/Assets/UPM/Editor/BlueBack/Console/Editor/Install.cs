@@ -58,7 +58,6 @@ namespace BlueBack.Console.Editor
 		}
 		#else
 		{
-			#warning "ASMDEF_TRUE"
 		}
 		#endif
 	}

@@ -99,7 +99,6 @@ namespace BlueBack.Console
 		}
 		#else
 		{
-			#warning "ASMDEF_TRUE"
 		}
 		#endif
 
